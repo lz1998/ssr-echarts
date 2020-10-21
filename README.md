@@ -1,7 +1,17 @@
 # SSR-ECHARTS
 
 
-用于服务端渲染生成echarts图片。如果参数较多建议使用POST，通过后端转发buffer
+用于服务端渲染生成echarts图片。可以使用Get或Post。如果参数较多建议使用POST，通过后端转发buffer。
+
+主题：chalk，essos，halloween，infographic，macarons，purple-passion，roma，romantic，shine，vintage，walden，westeros，wonderland
+
+## Docker部署
+环境：Docker
+
+指令：`docker run -d -p 3000:3000 lz1998/ssr-echarts`
+
+## 自己部署
+环境：nodejs 12
 
 安装依赖：`npm instsall`
 
