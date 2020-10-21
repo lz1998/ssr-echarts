@@ -1,0 +1,26 @@
+{
+  "name": "ssr-echarts",
+  "version": "1.0.0",
+  "description": "ssr echarts",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lz1998/ssr-echarts.git"
+  },
+  "author": "lz1998",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lz1998/ssr-echarts/issues"
+  },
+  "homepage": "https://github.com/lz1998/ssr-echarts#readme",
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "echarts": "^4.9.0",
+    "echarts-themes-js": "^1.0.2",
+    "express": "^4.17.1"
+  }
+}
