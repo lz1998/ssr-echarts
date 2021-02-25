@@ -2,19 +2,12 @@ const {createCanvas} = require('canvas')
 const echarts = require('echarts')
 
 // 引入主题
-require('echarts-themes-js/src/chalk')
-require('echarts-themes-js/src/essos')
-require('echarts-themes-js/src/halloween')
-require('echarts-themes-js/src/infographic')
-require('echarts-themes-js/src/macarons')
-require('echarts-themes-js/src/purple-passion')
-require('echarts-themes-js/src/roma')
-require('echarts-themes-js/src/romantic')
-require('echarts-themes-js/src/shine')
-require('echarts-themes-js/src/vintage')
-require('echarts-themes-js/src/walden')
-require('echarts-themes-js/src/westeros')
-require('echarts-themes-js/src/wonderland')
+require('./themes/dark')
+require('./themes/infographic')
+require('./themes/macarons')
+require('./themes/roma')
+require('./themes/shine')
+require('./themes/vintage')
 
 // 生成图片
 function generateImage(options, width, height, theme) {
