@@ -16,7 +16,6 @@ require('echarts-themes-js/src/walden')
 require('echarts-themes-js/src/westeros')
 require('echarts-themes-js/src/wonderland')
 
-const canvas = createCanvas(1024, 768)
 
 // 生成图片
 function generateImage(options, width, height, theme) {
@@ -25,15 +24,21 @@ function generateImage(options, width, height, theme) {
   console.log(`HEIGHT: ${height}`)
   console.log(`THEME: ${theme}`)
   console.log(`OPTIONS: ${JSON.stringify(options)}`)
+  canvas = createCanvas(1024,768)
   canvas.height = height
   canvas.width = width
-  const ctx = canvas.getContext('2d')
+  ctx = canvas.getContext('2d')
   ctx.font = '12px'
   echarts.setCanvasCreator(() => canvas)
-  const chart = echarts.init(canvas, theme)
+  chart = echarts.init(canvas, theme)
   options.animation = false
   chart.setOption(options)
-  return chart.getDom().toBuffer()
+  buffer = chart.getDom().toBuffer()
+  chart.dispose()
+  chart = null
+  ctx = null
+  canvas = null
+  return buffer
 }
 
 const express = require('express')
